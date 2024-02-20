@@ -541,6 +541,6 @@ function prevSlide() {
 }
 
     document.getElementById('openPDFButton').addEventListener('click', function() {
-        var pdfURL = 'https://www.chengsuhttps://drive.google.com/file/d/1375wdiBupZsHuKIVwSBRi67OCfyr3mte/view?usp=sharingchen.com/_files/ugd/edaea9_4bcac914ef6542018efd593d076a637f.pdf';
+        var pdfURL = 'https://drive.google.com/file/d/1375wdiBupZsHuKIVwSBRi67OCfyr3mte/view?usp=sharing';
         window.open(pdfURL, '_blank');
     });
