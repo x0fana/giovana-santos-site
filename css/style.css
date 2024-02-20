@@ -10078,3 +10078,22 @@ button:focus {
   border-radius: 100px;
   font-size: 0.875rem;
 }
+
+
+#btnTop {
+  display: none; /* Inicialmente, o botão está oculto */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  padding: 11px 27px;
+  background-color: #8300E9;
+  color: white;
+  text-decoration: none;
+  border-radius: 568px;
+  font-size: 1.5rem;
+}
+
+#btnTop:hover {
+  background-color: #6200ad; /* Altera a cor de fundo quando o mouse passa por cima */
+}
