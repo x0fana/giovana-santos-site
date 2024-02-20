@@ -541,6 +541,6 @@ function prevSlide() {
 }
 
     document.getElementById('openPDFButton').addEventListener('click', function() {
-        var pdfURL = 'https://drive.google.com/file/d/1375wdiBupZsHuKIVwSBRi67OCfyr3mte/view?usp=sharing';
+        var pdfURL = 'https://drive.google.com/file/d/1EP9o5wQeMzUAwBSHr10NU7cvEuN9sNUx/view?usp=sharing';
         window.open(pdfURL, '_blank');
     });
