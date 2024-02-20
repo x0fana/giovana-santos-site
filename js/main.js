@@ -544,3 +544,6 @@ function prevSlide() {
         var pdfURL = 'https://drive.google.com/file/d/1EP9o5wQeMzUAwBSHr10NU7cvEuN9sNUx/view?usp=sharing';
         window.open(pdfURL, '_blank');
     });
+
+
+

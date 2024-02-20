@@ -10071,3 +10071,10 @@ button:focus {
     background: transparent !important;
     color: #000000 !important;
 }
+
+.linknav{
+  border: 1px solid;
+  padding: 0.5rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.875rem;
+}
