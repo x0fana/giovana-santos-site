@@ -468,10 +468,6 @@ $(function() {
 
 
 
-
-
-
-
 // FORMULÁRIO
 
 $('#contactForm').validate({
@@ -522,28 +518,6 @@ $('#contactForm').validate({
 
 });
 
-
-
-let index = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-
-function nextSlide() {
-  slides[index].style.display = 'none';
-  index = (index + 1) % totalSlides;
-  slides[index].style.display = 'block';
-}
-
-function prevSlide() {
-  slides[index].style.display = 'none';
-  index = (index - 1 + totalSlides) % totalSlides;
-  slides[index].style.display = 'block';
-}
-
-    document.getElementById('openPDFButton').addEventListener('click', function() {
-        var pdfURL = 'https://drive.google.com/file/d/1EP9o5wQeMzUAwBSHr10NU7cvEuN9sNUx/view?usp=sharing';
-        window.open(pdfURL, '_blank');
-    });
 
 
 
