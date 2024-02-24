@@ -509,6 +509,11 @@ pre {
   margin-left: auto;
 max-width: 1140px;}
 
+.container-fluidd {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;}
+
   .container-fluid2 {
     max-width: 1200px;
     padding-right: 15px;
