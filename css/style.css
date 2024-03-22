@@ -10103,3 +10103,9 @@ button:focus {
 #btnTop:hover {
   background-color: #6200ad; /* Altera a cor de fundo quando o mouse passa por cima */
 }
+
+.project .text h3 span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
