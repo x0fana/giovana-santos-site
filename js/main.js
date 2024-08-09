@@ -468,10 +468,6 @@ $(function() {
 
 
 
-
-
-
-
 // FORMULÁRIO
 
 $('#contactForm').validate({
@@ -524,19 +520,53 @@ $('#contactForm').validate({
 
 
 
-let index = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
 
-function nextSlide() {
-  slides[index].style.display = 'none';
-  index = (index + 1) % totalSlides;
-  slides[index].style.display = 'block';
+// Quando o usuário rolar a página para baixo 20px a partir do topo, o botão será exibido
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btnTop").style.display = "block";
+  } else {
+    document.getElementById("btnTop").style.display = "none";
+  }
 }
 
-function prevSlide() {
-  slides[index].style.display = 'none';
-  index = (index - 1 + totalSlides) % totalSlides;
-  slides[index].style.display = 'block';
-}
+// Quando o usuário clicar no botão, a página será movida para o topo com scroll suave
+document.getElementById("btnTop").onclick = function() {
+  scrollToTop(); // Chama a função para rolar suavemente até o topo
+};
 
+// Função para rolar suavemente até o topo da página
+function scrollToTop() {
+  // Obtém a posição atual da página
+  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+  // Define a velocidade de rolagem em pixels por segundo
+  var speed = 1000; // 1000 pixels por segundo
+
+  // Calcula a distância a ser percorrida
+  var distance = currentPosition;
+
+  // Calcula o tempo de duração da animação de rolagem
+  var time = Math.max(0.1, Math.min(Math.abs(distance / speed), 0.8)) * 1000;
+
+  // Função de animação de rolagem
+  function animate(timeNow) {
+    var timeFraction = (timeNow - start) / time;
+    if (timeFraction > 1) timeFraction = 1;
+
+    var timeFunction = timeFraction;
+
+    // Calcula a nova posição da página
+    document.documentElement.scrollTop = currentPosition * (1 - timeFunction);
+
+    if (timeFraction < 1) {
+      requestAnimationFrame(animate);
+    }
+  }
+
+  // Inicia a animação de rolagem
+  var start = performance.now();
+  requestAnimationFrame(animate);
+}
